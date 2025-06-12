@@ -1,22 +1,3 @@
-# Backtesting Platform Documentation
-
-## 1. System Architecture Overview
-
----
-
-## 2. Source Code with Documentation
-
----
-
-## 3. Backtest Results and Interpretation
-
-
-
-
-
-
-
-
 # Backtesting Platform System Architecture Overview
 
 ## 1. Introduction
