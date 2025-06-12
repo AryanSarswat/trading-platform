@@ -1,0 +1,61 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# VSCode or PyCharm settings
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs and caches
+*.log
+*.sqlite3
+*.db
+*.pid
+*.seed
+*.bak
+*.swp
+
+# Environment variables and secrets
+.env
+*.key
+*.pem
+secrets.json
+
+# Compiled C extensions
+*.so
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Node (if frontend)
+node_modules/
+*.lock
+
+# Data
+*.csv
+*.txt
+*.png
+*.json
+*.jsonl
+*.jsonl.gz
+*.jsonl.gz.part
+*.jsonl.gz.part.1
+*.jsonl.gz.part.2
+*.jsonl.gz.part.3
+*.jsonl.gz.part.4
+*.jsonl.gz.part.5
