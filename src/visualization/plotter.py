@@ -4,11 +4,12 @@ import json
 import os
 import io
 
-def plot_equity_curve(equity_curve_json, title, output_path):
+
+def plot_equity_curve(equity_curve_json: str, title: str, output_path: str):
     equity_curve_data = json.loads(equity_curve_json)
     equity_curve_df = pd.DataFrame(
         data=equity_curve_data["data"],
-        index=pd.to_datetime(equity_curve_data["index"], unit=\"ms\"),
+        index=pd.to_datetime(equity_curve_data["index"], unit="ms"),
         columns=equity_curve_data["columns"]
     )
 
@@ -25,7 +26,7 @@ def plot_equity_curve(equity_curve_json, title, output_path):
     print(f"Saved equity curve plot to {output_path}")
 
 if __name__ == "__main__":
-    reports_dir = os.path.join(os.path.dirname(__file__), "reports")
+    reports_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "reports")
     results_file = os.path.join(reports_dir, "backtest_results.json")
 
     with open(results_file, "r") as f:

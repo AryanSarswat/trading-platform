@@ -1,0 +1,36 @@
+
+# Backtesting Configuration
+backtest:
+  initial_cash: 100000
+  tickers:
+    - "AAPL"
+    - "MSFT"
+    - "GOOGL"
+
+# Strategy Configurations
+strategies:
+  - moving_average_crossover:
+      short_window: 50
+      long_window: 200
+      stop_loss_percentage: 0.02
+  - rsi_strategy:
+      rsi_period: 14
+      overbought_threshold: 70
+      oversold_threshold: 30
+      stop_loss_percentage: 0.02
+  - mean_reversion:
+      window: 20
+      num_std_dev: 2
+      stop_loss_percentage: 0.02
+  - lstm_strategy:
+      look_back: 60
+      epochs: 10
+      batch_size: 32
+      train_split: 0.8
+      stop_loss_percentage: 0.02
+  - pairs_trading_strategy:
+      symbols: ["AAPL", "MSFT"]
+      window: 60
+      entry_zscore: 2.0
+      exit_zscore: 0.5
+      stop_loss_percentage: 0.02

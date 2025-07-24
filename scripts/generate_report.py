@@ -1,7 +1,12 @@
 import json
 from tabulate import tabulate
 
-with open('backtesting_platform/reports/performance_summary.json', 'r') as f:
+import os
+
+reports_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "reports")
+performance_summary_file = os.path.join(reports_dir, "performance_summary.json")
+
+with open(performance_summary_file, 'r') as f:
     performance_data = json.load(f)
 
 headers = ["Ticker", "Strategy", "Sharpe Ratio", "Sortino Ratio", "Max Drawdown", "Win/Loss Ratio", "CAGR", "Volatility", "Final Equity", "Total Trades"]
@@ -24,7 +29,7 @@ for ticker, strategies in performance_data.items():
 
 table = tabulate(rows, headers=headers, tablefmt="pipe")
 
-with open('performance_summary_table.md', 'w') as f:
+with open(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'performance_summary_table.md'), 'w') as f:
     f.write(table)
 
 

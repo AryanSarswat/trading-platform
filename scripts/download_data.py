@@ -21,7 +21,7 @@ def download_data(ticker, start_date, end_date, output_dir):
 
 if __name__ == "__main__":
     # Corrected path to be relative to the project's data directory
-    output_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
+    output_directory = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
 
     # Download AAPL data
     download_data("AAPL", "2020-01-01", "2023-12-31", output_directory)
